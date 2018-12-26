@@ -16,8 +16,8 @@
 			t2=40,
 			t3=80,
 			t4=10,
-			t5=10,
-			t6=10,
+			t5=30,
+			t6=16,
 			t7=10,
 			t8=10;
 
@@ -84,28 +84,22 @@
 			delay:t1+t2+t3,
 			tween:'linear'
 		},{
-			dom:check_right,
-			attr:[{transform:"translate(4,5)"},{transform:"translate(4,8)"}],
-			time:6,
-			delay:t1+t2+t3+t4+t5,
-			tween:'linear'		
-		},{
 			dom:cricle_fg,
 			css:[{opacity:1},{opacity:0}],
 			time:t6,
 			delay:t1+t2+t3+t4+t5,
 			tween:'linear'		
 		},{
-			dom:file,
-			css:[{opacity:0},{opacity:1}],
-			time:t7+10,
-			delay:t1+t2+t3+t4+t5+t6-5,
-			tween:'linear'
-		},{
 			dom:check_right,
 			css:[{opacity:1},{opacity:0}],
-			time:6,
-			delay:t1+t2+t3+t4+t5+t6+t8+60,
+			time:t6,
+			delay:t1+t2+t3+t4+t5,
+			tween:'linear'
+		},{
+			dom:file,
+			css:[{opacity:0},{opacity:1}],
+			time:t6,
+			delay:t1+t2+t3+t4+t5,
 			tween:'linear'
 		}],1,function(){
 			LOCK = false;
@@ -128,7 +122,6 @@
 			bottom_line.style.display='';
 
 			check_right.style.opacity = '0';
-			check_right.setAttribute('transform','translate(4,5)');
 
 			file.style.opacity = '0';
 
