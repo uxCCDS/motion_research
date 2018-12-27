@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>record</title>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+		<meta name="mobileoptimized" content="0" >
+		<meta name="apple-mobile-web-app-capable" content="yes" >
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="format-detection" content="telephone=no">
+		<style type="text/css">
+			.ball{display: block; width: 16px; height: 16px; border-radius: 50%;position: absolute;}
+			.red{background: #FF503C;}
+			.black{background: #333333;}
+			.con{width: 200px; height: 200px; position: relative;}
+			.center{position: absolute; top: 0px; left: 100px;}
+		</style>
+
+		<script type="text/javascript" src='../js/ash.js'></script>
+		<script type="text/javascript" src='../js/record.js'></script>
+	</head>
+	<body>
+		<div class='con'>
+			<a class='ball red center' id='btnRecord'>
+				<svg width="16px" height="16px" viewBox="0 0 16 16">
+					<path d="M5.993,2.9965 C5.993,4.65170938 4.65170938,5.993 2.9965,5.993 C1.34129062,5.993 0,4.65170938 0,2.9965 C0,1.34129062 1.34129062,0 2.9965,0 C4.65170938,0 5.993,1.34129062 5.993,2.9965 Z M5,2.9965 C5,1.88970938 4.10329062,0.993 2.9965,0.993 C1.88970938,0.993 0.993,1.88970938 0.993,2.9965 C0.993,4.10329062 1.88970938,5 2.9965,5 C4.10329062,5 5,4.10329062 5,2.9965 Z"
+				   	fill-rule="nonzero" fill="#FFFFFF" transform="translate(5, 5)"></path>               
+				</svg>
+			</a>
+			<a class='ball red center' style="display:none" id='btnPause'>
+				<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				    <path id='pathPause' d="M6.5,5 C6.225,5 6,5.225 6,5.5 L6,10.5 C6,10.775 6.225,11 6.5,11 C6.775,11 7,10.775 7,10.5 L7,5.5 C7,5.225 6.775,5 6.5,5
+				    M6.5,5 C6.225,5 6,5.225 6,5.5 L6,10.5 C6,10.775 6.225,11 6.5,11 C6.775,11 7,10.775 7,10.5 L7,5.5 C7,5.225 6.775,5 6.5,5
+				    M9.5,5 C9.225,5 9,5.225 9,5.5 L9,10.5 C9,10.775 9.225,11 9.5,11 C9.775,11 10,10.775 10,10.5 L10,5.5 C10,5.225 9.775,5 9.5,5" fill="#FFFFFF"></path>
+				</svg>
+			</a>
+			<a class='ball red center' style="display:none" id='btnStop'>
+				<svg width="16px" height="16px" viewBox="0 0 16 16">
+				    <path d="M9.5,5 L6.5,5 C5.675,5 5,5.675 5,6.5 L5,9.5 C5,10.325 5.675,11 6.5,11 L9.5,11 C10.325,11 11,10.325 11,9.5 L11,6.5 C11,5.675 10.325,5 9.5,5 Z M10,9.5 C10,9.771 9.771,10 9.5,10 L6.5,10 C6.229,10 6,9.771 6,9.5 L6,6.5 C6,6.229 6.229,6 6.5,6 L9.5,6 C9.771,6 10,6.229 10,6.5 L10,9.5 Z" fill="#FFFFFF"></path>        
+				</svg>
+			</a>
+		</div>
+	</body>
+</html>

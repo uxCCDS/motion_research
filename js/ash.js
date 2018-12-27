@@ -430,6 +430,10 @@
             },
             easeOutInt:function(t,b,c,d){
                 return parseInt(-c *(t/=d)*(t-2) + b);
+            },
+            easeInOutInt: function(t,b,c,d){
+                if ((t/=d/2) < 1) return parseInt(c/2*t*t + b);
+                return parseInt(-c/2 * ((--t)*(t-2) - 1) + b);
             },    
             rgbaLinear:function(t,b,c,d){
                 if((b>>0) === b && (c >>0)===c){

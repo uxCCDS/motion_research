@@ -8,7 +8,8 @@
 			cricle_bg = document.getElementById('cricle_bg'),
 			cricle_fg = document.getElementById('cricle_fg'),
 			check_right = document.getElementById('check_right'),
-			file = document.getElementById('file');
+			file = document.getElementById('file'),
+			group = document.getElementById('group');
 
 		var btnDownload = document.getElementById('btnDownload');
 
@@ -17,7 +18,7 @@
 			t3=80,
 			t4=10,
 			t5=30,
-			t6=16,
+			t6=10,
 			t7=10,
 			t8=10;
 
@@ -84,23 +85,25 @@
 			delay:t1+t2+t3,
 			tween:'linear'
 		},{
-			dom:cricle_fg,
-			css:[{opacity:1},{opacity:0}],
+			dom:group,
+			attr:[{
+				transform:"translate(0,0)"
+			},{
+				transform:"translate(0,-16)"
+			}],
 			time:t6,
 			delay:t1+t2+t3+t4+t5,
-			tween:'linear'		
-		},{
-			dom:check_right,
-			css:[{opacity:1},{opacity:0}],
-			time:t6,
-			delay:t1+t2+t3+t4+t5,
-			tween:'linear'
+			tween:'easeInOut'		
 		},{
 			dom:file,
-			css:[{opacity:0},{opacity:1}],
+			attr:[{
+				transform:"translate(0,16)"
+			},{
+				transform:"translate(0,0)"
+			}],
 			time:t6,
 			delay:t1+t2+t3+t4+t5,
-			tween:'linear'
+			tween:'easeInOut'
 		}],1,function(){
 			LOCK = false;
 		});
@@ -121,9 +124,11 @@
 			bottom_line.setAttribute('fill-opacity','1');
 			bottom_line.style.display='';
 
-			check_right.style.opacity = '0';
+			check_right.style.opacity=0;
 
-			file.style.opacity = '0';
+			group.setAttribute('transform','translate(0,0)');
+			file.setAttribute('transform','translate(0,16)');
+			
 
 			NEEDRESET = false;
 		};
