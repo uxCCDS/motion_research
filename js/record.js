@@ -20,7 +20,7 @@
 			css:[{
 				'transform': 'scale(1)'
 			},{
-				'transform': 'scale(0.6)',
+				'transform': 'scale(0.7)',
 				'display':'none'
 			}],
 			time:t,
@@ -49,7 +49,7 @@
 		},{
 			dom:btnTwins,
 			css:[{
-				'transform': 'scale(0.6)',
+				'transform': 'scale(0.7)',
 				'display':''
 			},{
 				'transform': 'scale(1)',
