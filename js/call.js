@@ -11,7 +11,7 @@ window.onload=function() {
 		arr=[],
 		t1=40,
 		t12=80,
-		t2=120,
+		t2=100,
 		delay=0,
 		scale=1,
 		i=0,
@@ -19,7 +19,7 @@ window.onload=function() {
 
 	for(;i<l;i++){
 		delay = i * step;
-		scale = (l-i)*0.1+1;
+		scale = (l-i)*0.2+1;
 		arr.push({
 			dom:bArr[i],
 			css:[{opacity:0},{opacity:1}],
